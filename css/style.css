@@ -1,0 +1,133 @@
+/* LOGO */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* HERO SECTION*/
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1542838132-92c53300491e");
+    background-size: cover;
+    background-position: center;
+    padding: 90px;
+    border-radius: 28px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px;
+    border-radius: 22px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    color: #dddddd;
+    font-size: 18px;
+}
+
+/* 
+   CARD (CLICKABLE)
+*/
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 26px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    min-height: 260px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.18);
+}
+
+.card-box h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card-box p {
+    color: #666666;
+    font-size: 14.5px;
+    margin-top: 10px;
+}
+
+
+/* MENU BUTTONS */
+section div.stButton > button {
+    all: unset;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+
+    padding: 6px 0;
+}
+
+/* Hover effect cho menu */
+section div.stButton > button:hover {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+/* Active state */
+section div.stButton > button:active {
+    color: #2e7d32;
+}
+
+/* Focus state */
+section div.stButton > button:focus {
+    outline: none;
+}
+.card-link,
+.card-link h3,
+.card-link p {
+    text-decoration: none !important;
+}
+
+.card-link:hover h3 {
+    color: #2e7d32;
+}
+/* CHART SELECTOR (GLASS BOX) */
+.chart-selector {
+    margin: 30px auto 10px;
+    padding: 18px 26px;
+    max-width: 900px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+
+    border-radius: 18px;
+    text-align: center;
+}
+
+.chart-selector p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Style cho selectbox */
+div[data-baseweb="select"] {
+    max-width: 300px;
+    margin: 12px auto 0;
+}

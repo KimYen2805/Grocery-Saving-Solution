@@ -1,0 +1,4 @@
+# Data files
+data/*.csv
+data/*.parquet
+data/*.zip
