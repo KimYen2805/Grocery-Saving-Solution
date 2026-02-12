@@ -23,7 +23,7 @@ def render_home():
     # ======================
     # LOAD DATA
     # ======================
-    df, rfm = load_all()
+    # df, rfm = load_all()
 
     # ======================
     # HERO
@@ -82,26 +82,26 @@ def render_home():
     # CHART ACCORDION STYLE
     # ======================
 
-    with st.expander("📊 Top 10 Products", expanded=False):
-        st.plotly_chart(
-            top_products_pie(df),
-            use_container_width=True
-        )
+    # with st.expander("📊 Top 10 Products", expanded=False):
+    #     st.plotly_chart(
+    #         top_products_pie(df),
+    #         use_container_width=True
+    #     )
 
-    with st.expander("📊 Order Frequency by Segment", expanded=False):
-        st.pyplot(
-            boxplot_orders_by_cluster(rfm)
-        )
+    # with st.expander("📊 Order Frequency by Segment", expanded=False):
+    #     st.pyplot(
+    #         boxplot_orders_by_cluster(rfm)
+    #     )
 
-    with st.expander("👥 Customer Distribution", expanded=False):
-        st.pyplot(
-            users_per_cluster(rfm)
-        )
+    # with st.expander("👥 Customer Distribution", expanded=False):
+    #     st.pyplot(
+    #         users_per_cluster(rfm)
+    #     )
 
-    with st.expander("📈 Orders Distribution", expanded=False):
-        st.pyplot(
-            orders_distribution(rfm)
-        )
+    # with st.expander("📈 Orders Distribution", expanded=False):
+    #     st.pyplot(
+    #         orders_distribution(rfm)
+    #     )
 
 
 
