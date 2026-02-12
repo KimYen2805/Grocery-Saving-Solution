@@ -47,13 +47,6 @@ Thumbs.db
 *.log
 
 # =========================
-# Large data files (IMPORTANT)
-# =========================
-data/raw/
-data/instacart/
-
-
-# =========================
 # Model artifacts
 # =========================
 *.pkl
