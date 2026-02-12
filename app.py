@@ -21,7 +21,16 @@ with open("css/style.css") as f:
 nav1, nav2, nav3, nav4 = st.columns([4, 1, 1, 1])
 
 with nav1:
-    st.markdown('<div class="logo">🥕 instacart</div>', unsafe_allow_html=True)
+    with nav1:  
+        st.markdown(
+        """
+        <a href="?page=HOME" class="logo-link">
+            <div class="logo">🥕 instacart</div>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+       
 
 with nav2:
     if st.button("HOME"):

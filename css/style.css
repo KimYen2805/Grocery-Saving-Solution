@@ -1,8 +1,18 @@
 /* LOGO */
+.logo-link {
+    text-decoration: none !important;
+    display: inline-block;
+}
+
 .logo {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     color: #2e7d32;
+}
+
+.logo-link:hover .logo {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* HERO SECTION*/
@@ -130,9 +140,7 @@ div[data-testid="stSelectbox"] {
     margin: -50px auto 0;  
 }
 
-/* ===============================
-   DEPARTMENT PANEL
-================================ */
+/* DEPARTMENT PANEL*/
 
 
 /* Title */
@@ -148,9 +156,7 @@ section div[data-testid="stCheckbox"] {
     margin-bottom: 10px;
 }
 
-/* ===============================
-   SUBMIT BUTTON
-================================ */
+/* SUBMIT BUTTON */
 
 div[data-testid="stFormSubmitButton"] > button {
     background-color: #5fb36f !important;
