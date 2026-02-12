@@ -15,7 +15,8 @@ def load_all():
     df = load_data()
     rfm = build_rfm(df)
     rfm = add_clusters(rfm)
-    return df, rfm
+    # return df, rfm
+    return rfm
 
 
 def render_home():
@@ -23,7 +24,7 @@ def render_home():
     # ======================
     # LOAD DATA
     # ======================
-    df, rfm = load_all()
+    # df, rfm = load_all()
 
     # ======================
     # HERO
@@ -95,25 +96,25 @@ def render_home():
     # ======================
     if chart_choice.startswith("1"):
         st.subheader("🍎 Top 10 Products")
-        st.plotly_chart(
-            top_products_pie(df),
-            use_container_width=True
-        )
+        # st.plotly_chart(
+        #     top_products_pie(df),
+        #     use_container_width=True
+        # )
 
-    elif chart_choice.startswith("2"):
-        st.subheader("📊 Order Frequency by Segment")
-        st.pyplot(
-            boxplot_orders_by_cluster(rfm)
-        )
+    # elif chart_choice.startswith("2"):
+    #     st.subheader("📊 Order Frequency by Segment")
+    #     st.pyplot(
+    #         boxplot_orders_by_cluster(rfm)
+    #     )
 
-    elif chart_choice.startswith("3"):
-        st.subheader("👥 Customer Distribution")
-        st.pyplot(
-            users_per_cluster(rfm)
-        )
+    # elif chart_choice.startswith("3"):
+    #     st.subheader("👥 Customer Distribution")
+    #     st.pyplot(
+    #         users_per_cluster(rfm)
+    #     )
 
-    elif chart_choice.startswith("4"):
-        st.subheader("📈 Orders Distribution")
-        st.pyplot(
-            orders_distribution(rfm)
-        )
+    # elif chart_choice.startswith("4"):
+    #     st.subheader("📈 Orders Distribution")
+    #     st.pyplot(
+    #         orders_distribution(rfm)
+    #     )
