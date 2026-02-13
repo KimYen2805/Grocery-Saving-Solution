@@ -122,7 +122,8 @@ section div.stButton > button:focus {
     padding: 28px 40px;
     border-radius: 32px;
     text-align: center;
-    margin-bottom: 18px ;
+   margin-bottom: 18px ;
+    width: 100%;
     box-shadow: 0 14px 30px rgba(0,0,0,0.08);
     transition: all 0.25s ease;
 }
