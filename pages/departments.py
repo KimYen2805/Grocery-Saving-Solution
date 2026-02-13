@@ -6,7 +6,7 @@ def render_departments():
     st.header("🏢 Department Page")
 
     df = pd.read_csv("data/departments.csv")
-    departments = df["department"].tolist()
+    departments = df["department"].dropna().unique().astype(str).tolist()
 
     col1, col2 = st.columns([1, 1.2])
 
@@ -15,7 +15,7 @@ def render_departments():
        # st.markdown('<div class="department-panel">', unsafe_allow_html=True)
 
         st.markdown(
-            '<div class="department-title">List of Department</div>',
+            '<div class="department-aisle-title">List of Department</div>',
             unsafe_allow_html=True
         )
 
@@ -34,7 +34,7 @@ def render_departments():
     with col2:
         st.markdown('<div class="department-panel">', unsafe_allow_html=True)
         st.markdown(
-            '<div class="department-title">Bundle Recommendation</div>',
+            '<div class="department-aisle-title">Bundle Recommendation</div>',
             unsafe_allow_html=True
         )
 #add 

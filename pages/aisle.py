@@ -16,7 +16,7 @@ def render_aisle():
        # st.markdown('<div class="department-panel">', unsafe_allow_html=True)
 
         st.markdown(
-            '<div class="department-title">List of Aisles</div>',
+            '<div class="department-aisle-title">List of Aisles</div>',
             unsafe_allow_html=True
         )
 
@@ -34,7 +34,7 @@ def render_aisle():
     # ================= RIGHT PANEL =================
     with col2:
         st.markdown('<div class="department-panel">', unsafe_allow_html=True)
-        st.markdown('<div class="department-title">Bundle Recommendation</div>', unsafe_allow_html=True)
+        st.markdown('<div class="department-aisle-title">Bundle Recommendation</div>', unsafe_allow_html=True)
 
         if submit and selected:
             st.success(f"Selected: {', '.join(selected)}")

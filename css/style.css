@@ -123,7 +123,7 @@ section div.stButton > button:focus {
     border-radius: 28px;
     text-align: center;
     margin-bottom: 18px ;
-    max-width: 900px;
+    max-width: 1100px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.08);
     transition: all 0.25s ease;
 }
@@ -165,7 +165,7 @@ div[data-testid="stExpander"] summary span {
 
 /* DEPARTMENT PANEL*/
 /* Title */
-.department-title {
+.department-aisle-title{
     text-align: center;
     font-weight: 600;
     font-size: 18px;
