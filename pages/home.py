@@ -71,7 +71,8 @@ def render_home():
     # ======================
     # CHART SELECTOR
     # ======================
-    with st.container():
+    col_center, _ = st.columns([1, 6,1])[1]
+    with col_center:
          st.markdown("""
     <div class="chart-selector">
         <p>Select the chart you want to explore from the list below</p>
