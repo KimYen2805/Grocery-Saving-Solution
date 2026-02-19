@@ -1,19 +1,85 @@
-/* LOGO */
-.logo-link {
-    text-decoration: none !important;
-    display: inline-block;
+/*Layout fix Streamlit */
+.block-container{
+    padding-top:0.4rem;
+}
+/* Remove default margins and padding from hr */
+hr {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.logo {
-    font-size: 32px;
-    font-weight: bold;
-    color: #2e7d32;
+/* Navbar*/
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 40px;
+    margin-bottom:10px;
+    background: linear-gradient(
+        180deg,
+        #0a0f0c 0%,
+        #13261a 55%,
+        #1c3a28 100%
+    );
+    border-radius:18px;
+    backdrop-filter: blur(6px);
+    box-shadow:
+        0 4px 8px rgba(0,0,0,.25),
+        0 16px 40px rgba(0,0,0,.20);
+    border:1px solid rgba(255,255,255,0.04);
 }
 
-.logo-link:hover .logo {
-    opacity: 0.8;
-    cursor: pointer;
+/* Logo */
+.logo{
+    font-size: 35px;
+    font-weight:700;
+    color:#4ff48b !important;
+    text-decoration:none !important;
 }
+
+/* Menu container */
+.menu{
+    display:flex;
+    align-items:center;
+    gap:42px;
+    position:relative;
+}
+
+/* Menu item */
+.menu a{
+    color:#cbd5e1;
+    text-decoration:none !important;
+    font-size:20px;      
+    font-weight:600;
+    padding-bottom:10px;
+    transition:.2s;
+    position: relative;
+
+}
+
+/* Hover */
+.menu a:hover{
+    color:white;
+}
+
+/* Active tab */
+.active{
+   color:#22c55e !important;
+    font-weight:800;
+}
+
+/* Active tab underline */
+.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:3px;
+    background:#22c55e;
+    border-radius:10px;
+}
+
 
 /* HERO SECTION*/
 .hero {
@@ -45,7 +111,7 @@
 }
 
 /* 
-   CARD (CLICKABLE)
+   CARD (CLICKABLE) Homepage
 */
 .card-link {
     text-decoration: none;
@@ -162,53 +228,152 @@ div[data-testid="stExpander"] summary span {
     margin-right: 10px;
 }
 
-
 /* DEPARTMENT AISLE PANEL*/
-/* Title */
-.department-aisle-title{
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 18px;
+/*  PANEL LAYOUT */
+[data-testid="stHorizontalBlock"] > div:first-child > div:has(.department-aisle-anchor){
+    background:#4f624c;
+    border-radius:18px;
+    padding:26px 28px;
 }
 
-/* Checkbox spacing */
-section div[data-testid="stCheckbox"] {
-    margin-bottom: 10px;
+[data-testid="stHorizontalBlock"] > div:last-child > div:has(.bundle-anchor){
+    background:#f5f5f2;
+    border-radius:18px;
+    padding:24px;
 }
 
-/* SUBMIT BUTTON */
-
-div[data-testid="stFormSubmitButton"] > button {
-    background-color: #5fb36f !important;
-    color: #ffffff !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    border-radius: 12px !important;
-    padding: 10px 26px !important;
-    border: none !important;
-    width: 100%;
+/* TITLES */
+.department-aisle-title, .bundle-title{
+    font-size:26px;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:16px;
 }
 
-/* Hover */
-div[data-testid="stFormSubmitButton"] > button:hover {
-    background-color: #4ea460 !important;
+/* INPUTS */
+.stTextInput input, .stSelectbox div[data-baseweb="select"]{
+    background:#2b2f3a !important;
+    color:white !important;
+    border-radius:8px !important;
+    font-size:16px !important;
 }
 
-div[data-testid="stButton"] > button {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    color: #222 !important;
-    font-size: 15px;
-    font-weight: 600;
+/* BUTTONS ...........*/
+button[kind="secondary"]{
+    background:transparent !important;
+    border:none !important;
+    color:white !important;
+    font-size:22px !important;
+    letter-spacing:5px;
+    padding: 0 !important;
+    margin-top: 10px !important;
+    box-shadow:none !important;
+    padding:0 !important;
+    display: block !important;
 }
 
-div[data-testid="stButton"] > button:hover {
-    color: #5fb36f !important;
-    text-decoration: underline;
+button[kind="secondary"]:hover{
+    opacity:.6;
 }
 
 
+/* PRIMARY BUTTON (SUBMIT) */
+button[kind="primary"]{
+    width:100% !important;
+    padding:16px 0 !important;
 
+    background:#66a96b !important;
+    color:white !important;
+    font-size:24px !important;
+    font-weight:700 !important;
 
+    border-radius:18px !important;
+    border:none !important;
+    box-shadow:0 10px 22px rgba(0,0,0,.35) !important;
+    text-decoration: none !important;
+}
+
+button[kind="primary"]:hover{
+    background:#7ec784 !important;
+    transform:translateY(-2px);
+}
+/* DEPARTMENT & BUNDLE RECOMMENDATION*/
+.bundle-title{
+    color:#2dab62 !important;  
+    font-size:26px;
+     font-weight:600;
+
+}
+/* BUNDLE ROW */
+.bundle-row{
+    display:flex;
+    gap:22px;
+    overflow-x:auto;
+    padding:14px 6px 18px 6px;
+    margin-bottom:18px;
+    scroll-behavior:smooth;
+}
+
+/* Custom scrollbar for bundle row */
+.bundle-row::-webkit-scrollbar{
+    height:8px;
+}
+/* Track */
+.bundle-row::-webkit-scrollbar-track{
+    background:#2f2f36;
+    border-radius:10px;
+}
+/* Thumb */
+.bundle-row::-webkit-scrollbar-thumb{
+    background:#2e7dff;
+    border-radius:10px;
+}
+
+/* Bundle card */
+.bundle-card{
+    min-width:150px;
+    flex:0 0 auto;
+
+    background:#e6d59a;
+    color:#1f2937;
+
+    padding:20px 10px;
+    text-align:center;
+    border-radius:14px;
+    font-weight:600;
+    font-size:16px;
+    transition:.2s;
+}
+
+.bundle-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+.bundle-dept{
+    background:#25782a;
+    color:white;
+    box-shadow:0 6px 16px rgba(0,0,0,.25);
+}
+
+/* Best match badge */
+.best-item{
+    position:relative;
+}
+
+/* Best match badge styling */
+.best-item::before{
+    content:"⭐ Best Match";
+    position:absolute;
+    top:-12px;
+    left:10px;
+
+    background:#2e7dff;
+    color:white;
+
+    padding:4px 10px;
+    font-size:13px;
+    font-weight:700;
+    border-radius:20px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
