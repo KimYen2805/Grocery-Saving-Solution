@@ -21,33 +21,23 @@ with open("css/style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # NAVBAR
-nav1, nav2, nav3, nav4 = st.columns([4, 1, 1, 1])
+def active(p):
+    return "active" if page == p else ""
 
-with nav1:
-    with nav1:  
-        st.markdown(
-        """
-        <a href="?page=HOME" class="logo-link">
-            <div class="logo">🥕 instacart</div>
-        </a>
-        """,
-        unsafe_allow_html=True
-    )
-       
+# ===== NAVBAR =====
+st.markdown(f"""
+<div class="navbar">
+    <a href="?page=HOME" class="logo">🥕 instacart</a>
 
-with nav2:
-    if st.button("HOME"):
-        st.query_params["page"] = "HOME"
+<div class="menu">
+    <a href="?page=HOME" class="{active('HOME')}">Home</a>
+    <a href="?page=ABOUT" class="{active('ABOUT')}">About Us</a>
+</div>
+</div>
+""", unsafe_allow_html=True)
 
-with nav3:
-    if st.button("LOGIN"):
-        st.query_params["page"] = "LOGIN"
+#st.divider()
 
-with nav4:
-    if st.button("ABOUT US"):
-        st.query_params["page"] = "ABOUT"
-
-st.divider()
 
 # ROUTER
 if page == "HOME":
@@ -58,9 +48,6 @@ elif page == "DEPARTMENTS":
 
 elif page == "AISLE":
     render_aisle()
-
-elif page == "LOGIN":
-    st.header("🔐 Login")
 
 elif page == "ABOUT":
     st.header("ℹ️ About Us")
