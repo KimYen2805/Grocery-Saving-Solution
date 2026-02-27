@@ -3,6 +3,7 @@ from pages.home import render_home
 from pages.departments import render_departments
 from pages.aisle import render_aisle
 from pages.dashboard import render_dashboard
+from pages.about_us import render_about 
 
 #  Page configuration
 st.set_page_config(page_title="Instacart Analytics", layout="wide")
@@ -50,7 +51,7 @@ elif page == "DASHBOARD":
     render_dashboard()
 
 elif page == "ABOUT":
-    st.header("ℹ️ About Us")
+    render_about()
 
 else:
     st.header("Page not found")
